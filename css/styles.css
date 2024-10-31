@@ -7,3 +7,278 @@ font-family: "Champagne & Limousines", sans-serif;
 :root {
     --bs-body-font-family: "Raleway", sans-serif;
 }
+
+
+.wrapper {
+    color: white;
+}
+
+main:not(:has(.collapse__body)) {
+    margin-bottom: 60px;
+    min-height: 100vh;
+}
+
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+.header_main {
+    margin-right: 10px;
+}
+
+.header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1240px;
+}
+.header_up {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.container {
+    color: black;
+}
+.time {
+    color: #BDAA8A ;
+}
+
+.contact_phone {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.menu-top_li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.header_menu_nav *,
+.header_menu_nav *:hover {
+    color: black;
+}
+
+.header_down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header_main {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+}
+
+.catalog {
+    display: flex;
+    align-items: center; 
+    margin-left: 15px;
+}
+.header_search {
+    display: flex;
+    align-items: center; 
+    margin-left: 25px;
+    border-radius: 10px;
+    width: 300px;
+    overflow: hidden;
+    border: 2px solid #F8F5F0;
+}
+.header_person {
+    display: flex;
+    margin-left: center;
+}
+
+.main-slider-section {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 60px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.main-slider-section img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+button {
+    border: none;
+    background: inherit;
+}
+
+input {
+    border: none;
+    background: inherit;
+    outline-width: 0;
+    width: 95%;
+}
+
+footer {
+    padding-top: 10px;
+    height-min: 200px;
+    background: #3D518C;
+    color: white; 
+}
+
+.footer_menu_col img {
+    width: 150px;
+    height: 76px;
+}
+
+
+.footer_menus {
+    padding: 40px 0px;
+    padding-bottom: 90px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.footer_menu_header {
+    font-size: 16px;
+    line-height: 19.2px;
+    font-weight: 500;
+}
+
+.font {
+    font-size: 14px;
+    line-height: 16.8px;
+    font-weight: 400;
+    flex-direction: column;
+    display: flex !important;
+    padding-left: 0px;
+}
+
+
+
+.footer_menu_col ul {
+    list-style: none;
+    gap: 8px;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.footer_menu_col *, 
+.footer_menu_col *:hover {
+    color: white;
+}
+
+.footer_made {
+    margin-top: auto;
+    color: white;
+}
+
+.footer_logobox {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.footer_made {
+    flex-direction: column;
+    display: flex !important;
+}
+
+.show_on_pc {
+    display: none;
+}
+.offcanvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+}
+.mobile_phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 200px;
+    border: 2px solid #BDAA8A;
+    background-color: #BDAA8A;
+}
+
+.mobile__menu__top {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1023px) {
+    .show_on_pc {
+      display: block;
+    }
+    .visible_on_the_phone {
+      display: none;
+    }
+
+    .footer_menus {
+        text-align: center;
+        display: block;
+    }
+
+    .footer_menu_col ul {
+        align-items: center;
+        
+    }
+    .footer_menu_header {
+        align-items: center;
+    }
+}
+
+li {
+    list-style-type: none;
+}
+
+.offcanvas {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.menu_un_li {
+    margin-top: auto;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
