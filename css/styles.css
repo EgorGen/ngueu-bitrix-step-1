@@ -26,6 +26,8 @@ main:not(:has(.collapse__body)) {
     background: white;
 }
 
+/* Нарушение методологии БЭМ. Избегай использование наименования тегов. 
+Только через селекторы */
 header {
     position: sticky;
     top: 0;
@@ -94,6 +96,10 @@ a:hover {
     padding: 10px;
 }
 
+/* Дубль. старт 
+либо объединить, но лучшу в HTML прописать bootstrap классы:
+flex align-items-center
+*/
 .header_main {
     display: flex;
     align-items: center;
@@ -103,6 +109,7 @@ a:hover {
     display: flex;
     align-items: center;
 }
+/* Дубль. конец */
 
 .logo img {
     width: 110px;
@@ -147,6 +154,11 @@ button {
     background: inherit;
 }
 
+/* этот стиль будет распространятся на все input
+и он будет иметь наибольший приоритет перед селектором.
+В будущем будет проблемно переопределить в других местах.
+Лучше используй bootstrap и доп класс для конкретизации стиля
+в соответствии макету */
 input {
     border: none;
     background: inherit;
@@ -156,6 +168,7 @@ input {
 
 footer {
     padding-top: 10px;
+    /* синтаксическая ошибка */
     height-min: 200px;
     background: #3D518C;
     color: white; 
@@ -186,6 +199,8 @@ footer {
     line-height: 16.8px;
     font-weight: 400;
     flex-direction: column;
+    /* нужно избегать использование !important
+    если вынуждает, значит, вероятнее всего, стили не корректно прописаны */
     display: flex !important;
     padding-left: 0px;
 }
@@ -199,6 +214,8 @@ footer {
     margin-top: 20px;
 }
 
+/* Не ошибка, но так делать нежелательно, 
+подумай над альтернативами */
 .footer_menu_col *, 
 .footer_menu_col *:hover {
     color: white;
@@ -244,6 +261,8 @@ align-items: center;
     margin-bottom: 20px;
 }
 
+/* Медиа запросы должны быть после всех стилей,
+иначе не избежать конфликта */
 @media (max-width: 1023px) {
     .show_on_pc {
       display: block;
@@ -266,10 +285,16 @@ align-items: center;
     }
 }
 
+/* не нужно этого делать глобально. 
+Когда верстка будет посажена на CMS будут много
+задач контент-менеджеру по составлению разных списков 
+Данное правило добавит проблем */
 li {
     list-style-type: none;
 }
 
+/* Можно убрать. Когда вынесешь в правильную зону
+в файле HTML, панель встанет как нужно */
 .offcanvas {
     display: flex;
     flex-direction: column;
@@ -279,6 +304,9 @@ li {
 .menu_un_li {
     margin-top: auto;
 }
+
+/* В макете не показана. Но как показывает практика
+эта кнопка потом нужна, так что смело возвращай. */
 input[type="search"]::-webkit-search-cancel-button {
     display: none;
 }

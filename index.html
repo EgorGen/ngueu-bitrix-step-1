@@ -21,20 +21,28 @@
 <body>
     <div class="wrapper">
         <header>
+            <!-- лишний тег. Класс можно вынести в header. -->
             <div class="header">
                 <!-- Шапка сайта -->
                 <div class="container">
+                    <!-- лишний класс visible_on_the_phone. Данный селектор уже прописан в bootstrap -->
                     <div class="header_up visible_on_the_phone">
                         <div class="contact">
                             <div class="gorod">
+                                <!-- по семантике при использовании img атрибут alt обязателен, даже если он пустой.
+                                 по общим принятым нормам одиночные теги прописываются тоже с слешем: <img src="" />.
+                                 в качестве иконки рекомендуется не использовать img, либо задать span/div с background-image,
+                                 либо вставить нативный svg, либо использовать svg sprite -->
                                 <img src="assets/icon/location-01.svg">
                                 <span class="hu">г. Екатеринбург</span>
                             </div>
                             <div class="contact_phone">
                                 <div class="Phone">
                                     <img src="assets/icon/Phone.svg">
+                                    <!-- номер должен был кликабелен: <a href="tel:+7[остальной_номер_без_знаков]"> -->
                                     <span class="hu"><a href="#">+7(922) 181 36 75</a></span>
                                 </div>
+                            <!-- вместо тега p, по семантике лучше использовать тег time -->
                             <div class="time"><p class="hu">(10:00-23:00)</p></div>
                         </div>
                     </div>
@@ -69,11 +77,15 @@
                     </div>
                     <div class="header_person">
                         <button class="show_on_pc"><img src="assets/icon/search-01.svg"></button>
-                        <button><img src="/assets/icon/buy.png"></button>
-                        <button><img src="/assets/icon/Like.png"></button>
+                        <button><img src="assets/icon/buy.png"></button>
+                        <button><img src="assets/icon/Like.png"></button>
                         <!-- <button><img src="/assets/icon/person-male-svgrepo-com.svg"></button> -->
                     </div>
                 </div>
+
+                <!-- панель не является частью шапки. Лучше вынести в самый низ после footer.
+                 Поисковые роботы индексируют страницу сверху-вниз второстепенный контент надо располагать 
+                 ниже -->
                 <div class="offcanvas show_on_pc" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                     <div class="menu_up_li">
                     <ul class="">
@@ -176,6 +188,7 @@
                                 <li class="menu-footer_li"><a href="#">г. Екатеринбург ул. Шефская д. 101</a></li>
                                 <li class="menu-footer_li"><a href="#">+7(922) 181 36 75</a></li>
                                 <li class="menu-footer_li"><a href="#">+7(922) 201 95 20</a></li>
+                                <!-- E-mail должен былть кликабелен: <a href="mailto:[email]"> -->
                                 <li class="menu-footer_li"><a href="#">gurmanmarketekb@gmail.com</a></li>
                             </ul>
                         </nav>
